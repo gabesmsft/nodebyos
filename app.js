@@ -46,6 +46,14 @@ app.get('/', (req, res) => {
   res.send(`Site image: <hr/><img src="${byos/banner4.svg}" width="500">`);
 });
 
+app.get('/MySiteStaticContents', (req, res) => {
+  res.write(`Static file 1: <hr/><img src="${byos/banner1.svg}" width="500">`);
+  res.write(`Static file 2: <hr/><img src="${byos/banner2.svg}" width="500">`);
+  res.write(`Static file 2: <hr/><img src="${byos/banner3.svg}" width="500">`);
+  res.write(`Static file 4: <hr/><img src="${byos/banner4.svg}" width="500">`);
+  res.end();
+});
+
 app.get('/upload', (req, res) => {
   res.sendFile(__dirname + '/upload.html');
 });
