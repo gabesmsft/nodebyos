@@ -46,9 +46,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/MySiteStaticContents', (req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write('<html><body>');
   res.write(`Static file 1: <hr/><img src="/public/banner1.jpg" width="500">`);
   res.write(`Static file 2: <hr/><img src="/public/banner2.jpg" width="500">`);
-  res.end();
+  res.end('</body></html>');
 });
 
 app.get('/upload', (req, res) => {
