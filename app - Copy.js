@@ -43,7 +43,6 @@ app.use('/users', usersRouter);
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
-  res.send(`Site image: <hr/><img src="${byos/banner4.svg}" width="500">`);
 });
 
 app.get('/upload', (req, res) => {
