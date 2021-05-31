@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 const fs = require('fs');
 var logger = require('morgan');
 var df = require('node-df');
-//const drivelist = require('drivelist');
+const drivelist = require('drivelist');
 const multer = require('multer');
 const helpers = require('./helpers');
 const storage = multer.diskStorage({
@@ -51,6 +51,11 @@ app.get('/MySiteStaticContents', (req, res) => {
   res.write(`Static file 1: <hr/><img src="/public/banner1.jpg" width="500">`);
   res.write('<br/>');
   res.write(`Static file 2: <hr/><img src="/public/banner2.jpg" width="500">`);
+  res.write('<br/>');
+  res.write(`Static file 3: <hr/><img src="/public/more/banner3.jpg" width="500">`);
+  res.write('<br/>');
+  res.write(`Static file 4: <hr/><img src="/public/more/banner4.jpg" width="500">`);
+  res.write('<br/>');
   res.end('</body></html>');
 });
 
