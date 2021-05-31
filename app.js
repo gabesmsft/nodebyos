@@ -46,8 +46,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/MySiteStaticContents', (req, res) => {
-  res.write(`Static file 1: <hr/><img src="${byos/banner1.svg}" width="500">`);
-  res.write(`Static file 2: <hr/><img src="${byos/banner2.svg}" width="500">`);
+  res.write(`Static file 1: <hr/><img src="${byos/banner1.jpg}" width="500">`);
+  res.write(`Static file 2: <hr/><img src="${byos/banner2.jpg}" width="500">`);
   res.end();
 });
 
